@@ -1,0 +1,62 @@
+﻿<Window x:Class="WpfControlsOthersApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfControlsOthersApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TreeView x:Name="treeApps"
+                  Grid.Row="0"
+                  Grid.Column="0"
+                  FontSize="20">
+            <TreeViewItem Header="Game">
+                <TreeViewItem Header="Factorio"/>
+                <TreeViewItem Header="Civilization"/>
+                <TreeViewItem Header="Tetris"/>
+            </TreeViewItem>
+            <TreeViewItem Header="Desktop app">
+                <TreeViewItem Header="Microsoft Word"/>
+                <TreeViewItem Header="Adobe Photoshop"/>
+                <TreeViewItem Header="CorelDraw"/>
+                <TreeViewItem Header="MathLab"/>
+            </TreeViewItem>
+        </TreeView>
+        <StackPanel
+            Grid.Row="0"
+            Grid.Column="1">
+            <Calendar x:Name="calendar"
+                      IsTodayHighlighted="False"
+                      SelectionMode="MultipleRange"
+                      DisplayMode="Month"/>
+            <DatePicker
+                SelectedDateFormat="Long"
+                IsDropDownOpen="False"/>
+        </StackPanel>
+        <StackPanel
+            Grid.Row="0"
+            Grid.Column="2">
+            <Slider Minimum="20"
+                    Maximum="80"
+                    Value="30"
+                    Orientation="Horizontal"
+                    TickPlacement="Both"
+                    TickFrequency="10"
+                    IsSelectionRangeEnabled="True"
+                    SelectionStart="30"
+                    SelectionEnd="70"/>
+        </StackPanel>
+    </Grid>
+</Window>
+
+    
